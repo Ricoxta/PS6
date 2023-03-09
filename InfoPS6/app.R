@@ -11,8 +11,9 @@ library(shiny)
 
 ui <- fluidPage(
 
-    titlePanel("Old Faithful Geyser Data"),
-
+    titlePanel("Info PS6"),
+   tabsetPanel(
+      tabPanel("Overview"),
     sidebarLayout(
         sidebarPanel(
             
@@ -20,7 +21,30 @@ ui <- fluidPage(
         mainPanel(
            plotOutput("distPlot")
         )
-    )
+    ),
+    tabPanel("Data Plot"),
+    sidebarLayout(
+      sidebarPanel(
+        
+      ),
+      mainPanel(
+        
+        
+      )
+    ),
+    
+    tabPanel("Table"),
+    sidebarLayout(
+      sidebarPanel(
+        
+      ),
+      mainPanel(
+        
+      )
+    ),
+  
+  
+  )
 )
 
 server <- function(input, output) {
